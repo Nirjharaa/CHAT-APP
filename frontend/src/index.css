@@ -3,11 +3,9 @@
 @tailwind utilities;
 
 body {
-	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/bg.jpg");
+	/* background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), hsla(197, 100%, 63%, 1); */
 	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
+	background: linear-gradient(90deg, hsla(190, 79%, 59%, 1) 0%, hsla(226, 50%, 65%, 1) 100%);}
 
 /* dark mode looking scrollbar */
 ::-webkit-scrollbar {
