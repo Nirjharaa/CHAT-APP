@@ -26,19 +26,21 @@ const SignUp = () => {
 	return (
 		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
 			<div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
-				<h1 className='text-3xl font-semibold text-center text-gray-300'>
-					Sign Up <span className='text-blue-500'> ChatApp</span>
+				<h1 className='text-3xl font-semibold text-center text-gray-300' style={{ color:"#8093f1" }}>
+					Sign Up
+					{/* <span className='text-blue-500'> ChatApp</span> */}
 				</h1>
 
 				<form onSubmit={handleSubmit}>
 					<div>
 						<label className='label p-2'>
-							<span className='text-base label-text'>Full Name</span>
+							<span className='text-base  label-text'>Full Name</span>
 						</label>
 						<input
 							type='text'
 							placeholder='Nirjharaa Patel'
-							className='w-full input input-bordered  h-10'
+							className='w-full  bg-white border-3 rounded-full input input-bordered  h-10'
+							style={{ borderColor: '#BBD0FF', color: '#13293d' }}
 							value={inputs.fullName}
 							onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })}
 						/>
@@ -51,7 +53,8 @@ const SignUp = () => {
 						<input
 							type='text'
 							placeholder='nirjharaapatel'
-							className='w-full input input-bordered h-10'
+							className='w-full  bg-white border-3 rounded-full input input-bordered h-10'
+							style={{ borderColor: '#BBD0FF', color: '#13293d' }}
 							value={inputs.username}
 							onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
 						/>
@@ -64,7 +67,8 @@ const SignUp = () => {
 						<input
 							type='password'
 							placeholder='Enter Password'
-							className='w-full input input-bordered h-10'
+							className='w-full  bg-white border-3 rounded-full input input-bordered h-10'
+							style={{ borderColor: '#BBD0FF', color: '#13293d' }}
 							value={inputs.password}
 							onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
 						/>
@@ -77,7 +81,8 @@ const SignUp = () => {
 						<input
 							type='password'
 							placeholder='Confirm Password'
-							className='w-full input input-bordered h-10'
+							className='w-full bg-white border-3 rounded-full input input-bordered h-10'
+							style={{ borderColor: '#BBD0FF', color: '#13293d' }}
 							value={inputs.confirmPassword}
 							onChange={(e) => setInputs({ ...inputs, confirmPassword: e.target.value })}
 						/>
@@ -94,7 +99,7 @@ const SignUp = () => {
 					</Link>
 
 					<div>
-						<button className='btn btn-block btn-sm mt-2 border border-slate-700' disabled={loading}>
+						<button className='btn btn-block border-3 bg-blue-100 btn-sm mt-2 hover:bg-blue-300 rounded-full' style={{ borderColor: '#BBD0FF', color: '#13293d' }} disabled={loading}>
 							{loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
 						</button>
 					</div>

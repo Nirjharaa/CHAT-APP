@@ -16,7 +16,9 @@ function App() {
         <Route path="/signup" element={ authUser ? <Navigate to="/" /> : <SignUp /> } />
       </Routes>
       <Toaster/>
+  
     </div>
+    
   );
 }
 

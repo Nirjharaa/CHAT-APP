@@ -19,9 +19,9 @@ const MessageContainer = () => {
          			) : (
          				<>
          					{/* Header */}
-         					<div className='bg-gray-700 px-4 py-2 mb-2'>
-         						<span className='label-text'>To:</span>{" "}
-         						<span className='text-gray-100 font-bold'>{selectedConversation.fullName}</span>
+         					<div className='bg-white px-4 py-2 mb-2'>
+         						<span className='label-text' style={{color:"#13293d" }}>To:</span>{" "}
+         						<span className='font-bold' style={{ color:"#13293d" }}>{selectedConversation.fullName}</span>
          					</div>
          					<Messages />
          					<MessageInput />
@@ -37,8 +37,8 @@ export default MessageContainer;
 const NoChatSelected = () => {
 	const { authUser } = useAuthContext();
 	return (
-		<div className='flex items-center justify-center w-full h-full'>
-			<div className='px-4 text-center sm:text-lg md:text-xl text-gray-200 font-semibold flex flex-col items-center gap-2'>
+		<div className='flex items-center justify-center w-full h-full' style={{ backgroundColor:"#e3f2fd" }}>
+			<div className='px-4 text-center sm:text-lg md:text-xl font-semibold flex flex-col items-center gap-2' style={{ color:"#13293d" }}>
 				<p>Welcome 👋 {authUser.fullName} ❄</p>
 				<p>Select a chat to start messaging</p>
 				<TiMessages className='text-3xl md:text-6xl text-center' />
